@@ -32,8 +32,8 @@ def create_app() -> Litestar:
         on_startup=[on_startup],
         on_shutdown=[on_shutdown],
         exception_handlers={Exception: handle_unexpected_exception},
-        # dependencies={'service': Provide(provide_api_service)},
-        # route_handlers=[APIController]
+        dependencies={'service': Provide(provide_api_service)},
+        route_handlers=[APIController]
 
     )
 
