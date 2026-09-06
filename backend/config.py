@@ -7,13 +7,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = bool(os.getenv('DEBUG',False))
 
 database_path = BASE_DIR / 'backend'/ 'database.db'
-
+database_url= f"sqlite:///{database_path}"
 
 def dict_factory(cursor,row):
     return {col[0]: row[idx] for idx,col in enumerate(cursor.description)}
 
 def setup_db_conn() -> sqlite3.Connection:
-    connection = sqlite3.connection(database_path, isolation_level=None,check_same_thread=False)
+    connection = sqlite3.connect(database_path, isolation_level=None,check_same_thread=False)
 
     connection.row_factory = dict_factory
 

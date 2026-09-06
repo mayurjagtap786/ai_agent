@@ -1,0 +1,38 @@
+{
+  "components": [
+    {
+      "id": "harts",
+      "name": "HARTS",
+      "description": "This is harts application",
+      "children": [
+        {
+          "id": "addcrossreferencedata",
+          "name": "AddCrossReferenceData",
+          "description": "This is AddCrossReference Service"
+        },
+        {
+          "id": "validaterules",
+          "name": "ValidateRules",
+          "description": "This is ValidateRules Service"
+        }
+      ]
+    },
+    {
+      "id": "trillium",
+      "name": "trillium",
+      "description": "This is Trillium application",
+      "children": [
+        {
+          "id": "addproduct",
+          "name": "AddProduct",
+          "description": "This is AddProduct Service"
+        },
+        {
+          "id": "broadcaststatus",
+          "name": "BroadCastStatus",
+          "description": "This is BroadCastStatus Service"
+        }
+      ]
+    }
+  ]
+}
